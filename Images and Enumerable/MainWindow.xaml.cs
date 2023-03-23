@@ -38,14 +38,13 @@ namespace Images_and_Enumerable
 
             //display
             imgDisplay.Source = image;
-            //Convert to black and white
+            
             FormatConvertedBitmap greyscale = new FormatConvertedBitmap();
             //Initilaizing
             greyscale.BeginInit();
             //source
             greyscale.Source = image;
-            //pass a destiation format
-            //pixelFormats.Gray32Float
+            
             greyscale.DestinationFormat = PixelFormats.Gray32Float;
 
             //end 
@@ -66,17 +65,16 @@ namespace Images_and_Enumerable
             //display
             imgDisplay.Source = image;
 
-            //Convert to black and white
+            
             FormatConvertedBitmap greyscale = new FormatConvertedBitmap();
             //Initilaizing
             greyscale.BeginInit();
             //source
             greyscale.Source = image;
-            //pass a destiation format
-            //pixelFormats.Gray32Float
+            
             greyscale.DestinationFormat = PixelFormats.Cmyk32;
 
-            //end 
+             
             greyscale.EndInit();
 
             imgDisplay.Source = greyscale;
@@ -90,15 +88,15 @@ namespace Images_and_Enumerable
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //find the path
+           
             OpenFileDialog files = new OpenFileDialog();
 
             if (files.ShowDialog() == true)
-            {//file path 
+            {
                 filePath = files.FileName;
-                //display the file path 
+                
                 lbfilePath.Content = filePath;
-                //image import
+                
                 BitmapImage image = new BitmapImage();
                 Uri uri = new Uri(filePath);
 
